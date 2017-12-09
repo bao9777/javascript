@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+			list-style: none;
+		}
+		#wrap{
+			width: 678px;
+			height: 615px;
+			margin: 50px auto;
+			border: 1px solid black; 
+			background-color: #f8f7f4;
+		}
+		#navTop{
+			width: 678px;
+			height: 50px;
+			/*border: 1px solid red;*/
+			line-height: 30px;
+		}
+		#navTop img{
+			width:30px;
+			height: 30px;
+			border-radius: 30px;
+			float: left;
+			margin: 10px;
+
+		}
+		#navTop span{
+			float: left;
+			height: 50px;
+			line-height: 50px;
+		
+		}
+		#navBottom{
+			border-bottom:1px solid #e2e1df;
+			width:  678px;
+			height: 40px;
+			
+		}
+		#navBottom ul li{
+			float: left;
+			margin: 7px 10px 0px 10px;
+			padding: 5px;
+			color: gray;
+		}
+		#navBottom ul li:hover{
+			color: #000;
+		}
+		#conLeft{
+			width: 476px;
+    		height: 400px;
+    		overflow-y: auto;
+    		border-right: 1px solid #e2e1df;
+    		float: left;
+
+		}
+		#footer{
+			height: 118px;
+			width: 476px;
+			border-top: 1px solid #e2e1df;
+			border-right: 1px solid #e2e1df;
+			float: right;
+			position: relative;
+			left: -3px;
+		}
+		#conRight{
+			width: 198px;
+    		height: 520px;
+    		/*border: 1px solid green;*/
+    		float: right;
+		}
+		#navBottom ul #notice{
+			color: #000;
+    		border-bottom: 3px solid #009bdb;
+		}
+		#navBottom ul{
+			float: left;
+		}
+
+		#footer textarea{
+			width:456px;
+			height: 50px;
+			resize: none;
+			border: none;
+    		background-color: #f8f7f4;
+    		outline: none;
+		}
+		#footer ul{
+			float: right;
+			width: 197px;
+			height: 24px;
+			
+		}
+		#footer ul li{
+			float: left;
+			line-height: 24px;
+			font-size: 12px;
+			font-weight: bold;
+			
+			border-radius: 4px;
+			margin-left: 10px;
+			text-align: center;
+			background-color: #dbd1be;background-color: #dbd1be;
+		}
+		#footer ul #close{
+			
+			width: 70px;
+			height: 24px;
+		}
+		#footer ul #send{
+			
+			width: 100px;
+			height: 24px;
+		}
+		#footer ul #send p{
+			display: none;
+			width: 150px;
+		    height: 50px;
+		    border: 1px solid lightblue;
+		    text-align: left;
+		    border-radius: 8px;
+		    position: relative;
+		    left: -70px;
+		    top: -83px;
+		}
+		#conLeft{
+			position: relative;
+			overflow-x: hidden;
+		}
+		#conLeft ul{
+			width: 476px;
+		}
+		#conLeft ul li{
+			width:474px;
+			height: 70px;
+		/*	border: 1px solid red;*/
+			margin-top: 2px;
+		}
+		#conLeft ul li p{
+			height: 30px;
+			text-align: center;
+		    color: #808080;
+		    font-size: 10px;
+		    line-height: 30px;
+		}
+		#conLeft ul li div{
+			width: 120px;
+			height: 41px;
+			float: right;
+			/*border: 1px solid red;*/
+		}
+		#conLeft ul li img{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			float: left;
+			margin-left: 11px;
+			
+		}
+		#conLeft ul li div span{
+			width: 68px;
+			height: 40px;
+			float: left;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 8px;
+			font-size: 12px;
+			background-color: #dfdddb;
+		}
+		#conLeft #rBox {
+			border: 1px solid black;
+		    width: 125px;
+		    height: 144px;
+		    display: none;
+		    position: absolute;
+		    background-color: white;
+
+		}
+		#conLeft #rBox li{
+			width:100px;
+			height: 20px;
+			float: right;
+			line-height: 20px;
+			font-size: 13px;
+			text-align: center;
+
+
+		}
+		#conLeft #rBox .line{
+			border-bottom: 1px solid #e2e1df;
+		}
+		#conLeft #rBox #choice{
+			width:20px;
+			height: 142px;
+			float: left;
+			line-height: 170px;
+			/*border:1px solid blue;*/
+			background-color: #dad7d2;
+		}
+		#footer #navface{
+			position: relative;
+		}
+		#footer #face{
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			top:0px;
+			left: 30px;
+			background-image: url(images/2.png);
+			background-position: -6px -3px;
+		}
+		#conLeft #facebox{
+			display: none;
+			width: 240px;
+			height: 250px;
+			border: 1px solid black;
+			position: absolute;
+			left: 30px;
+			overflow-y: scroll;
+		}
+
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="nav">
+			<div id="navTop">
+				<img src="images/head.png">
+				<span>16级78班事务通知群</span>
+			</div>
+			<div id="navBottom">
+				<ul>
+					<li id="notice">聊天</li>
+					<li>公告</li>
+					<li>相册</li>
+					<li>文件</li>
+					<li>活动</li>
+					<li>设置&nbsp;▼</li>
+				</ul>
+			</div>
+		</div>
+		<div id="conRight"></div>
+		<div id="conLeft">
+			<ul>
+				<li>
+					<p>2017/10/12 16:59:32</p>
+					<div>
+						<span>好好学习</span>
+						<img src="images/myHead.jpg" alt="">
+					</div>
+				</li>
+				<li>
+					<p>2017/10/12 16:59:32</p>
+					<div>
+						<span>好好学习</span>
+						<img src="images/myHead.jpg" alt="">
+					</div>
+				</li>
+			</ul>
+
+			<ul id="rBox">
+				<div id="choice">✔</div>
+				<li>复制(C)</li>
+				<li class="line">全部选择(A)</li>
+				<li>显示比例▶</li>
+				<li>使用多彩气泡</li>
+				<li class="line">设置多彩气泡</li>
+				<li>清屏</li>
+			</ul>
+			<div id="facebox"></div>
+		</div>
+		<div id="footer">
+			<img src="images/tit.png" id="navface">
+			<div id="face"></div>
+			<textarea></textarea>
+			<ul>
+				<li id="close">关闭(c)</li>
+				<li id="send">
+					发送(s)&nbsp;&nbsp;&nbsp;▼
+					<p>发送内容不能为空，请重新输入</p>
+				</li>
+			</ul>
+		</div>
+		
+		
+		
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var send=document.getElementById("send");
+	var area=document.getElementsByTagName("textarea")[0];
+	var conLeft=document.getElementById("conLeft");
+	var timer;
+	var rBox=document.getElementById("rBox");
+	var facebox=document.getElementById("facebox");
+	var face=document.getElementById("face");
+	var flag=true;
+	send.onclick=function(){
+		if(area.value=="")
+		{
+			send.children[0].style.display="block";
+			clearTimeout(timer);
+			timer=setTimeout(function(){
+				send.children[0].style.display="none";
+			},1000);
+		}
+		else{
+			var li=document.createElement("li");
+			var time=new Date().toLocaleString();
+			li.innerHTML="<li><p>"+ time +"</p><div><span>"+ area.value +"</span><img src='images/myHead.jpg'></div></li>";
+			conLeft.children[0].appendChild(li);
+			li.scrollIntoView();
+			area.value ='';
+			area.focus();
+		}
+	}
+	area.onkeydown=function(e){
+		if(e.keyCode==13 && e.shiftKey==false){
+			send.onclick();
+			e.preventDefault();
+		}
+	}
+	conLeft.oncontextmenu=function(e){
+		e.preventDefault();
+		rBox.style.display="block";
+		rBox.style.left=e.clientX-conLeft.offsetLeft+'px';
+		rBox.style.top=e.clientY-conLeft.offsetTop+'px';
+	}
+	document.onclick=function(){
+		rBox.style.display="none";
+	}
+
+	
+	for(var i=1;i<=132;++i){
+		facebox.innerHTML+='<img src="images/QQ/'+i+'.gif"/>';
+	}
+
+	face.onclick=function(){
+		flag?facebox.style.display="block":facebox.style.display="none";
+		flag=!flag;
+	}
+
+	
+	
+</script>
+</html>
